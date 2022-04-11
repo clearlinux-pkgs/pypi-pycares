@@ -4,7 +4,7 @@
 #
 Name     : pypi-pycares
 Version  : 4.1.2
-Release  : 19
+Release  : 20
 URL      : https://files.pythonhosted.org/packages/83/61/17bd0cfb9c4dc8c3738484d604b50d47c78fe4fcfe0ca2c58a61a106f578/pycares-4.1.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/83/61/17bd0cfb9c4dc8c3738484d604b50d47c78fe4fcfe0ca2c58a61a106f578/pycares-4.1.2.tar.gz
 Summary  : Python interface for c-ares
@@ -15,15 +15,12 @@ Requires: pypi-pycares-python = %{version}-%{release}
 Requires: pypi-pycares-python3 = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-distutils3
-Provides: pycares
-Provides: pycares-python
-Provides: pycares-python3
-BuildRequires : pypi(pluggy)
-BuildRequires : py-python
 BuildRequires : pypi(cffi)
-BuildRequires : pytest
-BuildRequires : tox
-BuildRequires : pypi(virtualenv)
+BuildRequires : pypi(py)
+BuildRequires : pypi-pluggy
+BuildRequires : pypi-pytest
+BuildRequires : pypi-tox
+BuildRequires : pypi-virtualenv
 
 %description
 ===========================
@@ -65,7 +62,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641473656
+export SOURCE_DATE_EPOCH=1649698820
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
