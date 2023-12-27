@@ -5,7 +5,7 @@
 #
 Name     : pypi-pycares
 Version  : 4.4.0
-Release  : 38
+Release  : 39
 URL      : https://files.pythonhosted.org/packages/1b/8f/daf60bbc06f4a3cd1cfb0ab807057151287df6f5c78f2e0d298acc9193ac/pycares-4.4.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/1b/8f/daf60bbc06f4a3cd1cfb0ab807057151287df6f5c78f2e0d298acc9193ac/pycares-4.4.0.tar.gz
 Summary  : Python interface for c-ares
