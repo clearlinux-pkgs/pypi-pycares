@@ -1,5 +1,5 @@
 PKG_NAME := pypi-pycares
-URL = https://files.pythonhosted.org/packages/6c/ac/05e32fe0abecf98b58cb28646d59280ebad8d79b9785ad6771fa830a458b/pycares-4.6.0.tar.gz
+URL = https://files.pythonhosted.org/packages/47/2e/1fab7f91820c788a3d236f8fe25a1ea6c4f51b728fb11d3c05d02e04a5d4/pycares-4.6.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
