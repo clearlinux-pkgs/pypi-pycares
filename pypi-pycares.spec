@@ -6,10 +6,10 @@
 # autospec commit: 9594167
 #
 Name     : pypi-pycares
-Version  : 4.7.0
-Release  : 45
-URL      : https://files.pythonhosted.org/packages/9d/cd/dabe7fb5fd0089a1a37ae94e30b2fb094bff098492f1fbdfd8e2969d69a6/pycares-4.7.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/9d/cd/dabe7fb5fd0089a1a37ae94e30b2fb094bff098492f1fbdfd8e2969d69a6/pycares-4.7.0.tar.gz
+Version  : 4.8.0
+Release  : 46
+URL      : https://files.pythonhosted.org/packages/19/7a/01ef7ce35fc1312d6c1c07f3b87f329ad6daf41bb9cd57c8f017e0b653fa/pycares-4.8.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/19/7a/01ef7ce35fc1312d6c1c07f3b87f329ad6daf41bb9cd57c8f017e0b653fa/pycares-4.8.0.tar.gz
 Summary  : Python interface for c-ares
 Group    : Development/Tools
 License  : BSD-3-Clause GPL-3.0 MIT
@@ -58,10 +58,10 @@ python3 components for the pypi-pycares package.
 
 
 %prep
-%setup -q -n pycares-4.7.0
-cd %{_builddir}/pycares-4.7.0
+%setup -q -n pycares-4.8.0
+cd %{_builddir}/pycares-4.8.0
 pushd ..
-cp -a pycares-4.7.0 buildavx2
+cp -a pycares-4.8.0 buildavx2
 popd
 
 %build
@@ -69,7 +69,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1746195837
+export SOURCE_DATE_EPOCH=1746458934
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -116,9 +116,10 @@ export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-pycares
 cp %{_builddir}/pycares-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-pycares/c4de206e0fa6c5d904eb6c7695f6ffb5d2d90a6b || :
-cp %{_builddir}/pycares-%{version}/deps/c-ares/LICENSE.md %{buildroot}/usr/share/package-licenses/pypi-pycares/12127d9b9e698989a5b23087aa7c39f5e6eb264e || :
+cp %{_builddir}/pycares-%{version}/deps/c-ares/LICENSE.md %{buildroot}/usr/share/package-licenses/pypi-pycares/eb842ed59ffa0beca69b26f2758707d3ae222b7c || :
 cp %{_builddir}/pycares-%{version}/deps/c-ares/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/pypi-pycares/7d742d725c74463f26afc2c6b7433dff4296a315 || :
 cp %{_builddir}/pycares-%{version}/deps/c-ares/LICENSES/GPL-3.0-or-later.txt %{buildroot}/usr/share/package-licenses/pypi-pycares/31a3d460bb3c7d98845187c716a30db81c44b615 || :
+cp %{_builddir}/pycares-%{version}/deps/c-ares/LICENSES/MIT.txt %{buildroot}/usr/share/package-licenses/pypi-pycares/79cd312a96d47bb265e48bbaf2713e346f4cd8b9 || :
 python3 -m installer --destdir=%{buildroot} dist/*.whl
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -138,10 +139,11 @@ popd
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/pypi-pycares/12127d9b9e698989a5b23087aa7c39f5e6eb264e
 /usr/share/package-licenses/pypi-pycares/31a3d460bb3c7d98845187c716a30db81c44b615
+/usr/share/package-licenses/pypi-pycares/79cd312a96d47bb265e48bbaf2713e346f4cd8b9
 /usr/share/package-licenses/pypi-pycares/7d742d725c74463f26afc2c6b7433dff4296a315
 /usr/share/package-licenses/pypi-pycares/c4de206e0fa6c5d904eb6c7695f6ffb5d2d90a6b
+/usr/share/package-licenses/pypi-pycares/eb842ed59ffa0beca69b26f2758707d3ae222b7c
 
 %files python
 %defattr(-,root,root,-)
